@@ -540,7 +540,7 @@ class SolrSearchBackend(BaseSearchBackend):
                     ):
                         additional_fields[string_key] = index.fields[
                             string_key
-                        ].convert(value)
+                        ].convert(value[0])
                     else:
                         additional_fields[string_key] = self.conn._to_python(value)
 
